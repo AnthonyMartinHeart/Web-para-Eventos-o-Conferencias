@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - EventPro 2026</title>
+    <meta name="description" content="Agenda completa de EventPro 2026 - Tres días llenos de conferencias, talleres y networking">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#6366f1',
+                        'secondary': '#ec4899',
+                        'accent': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" id="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-white"></i>
+                    </div>
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">EventPro</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Inicio</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary transition">Acerca de</a>
+                    <a href="speakers.html" class="text-gray-700 hover:text-primary transition">Speakers</a>
+                    <a href="schedule.html" class="text-primary font-semibold">Agenda</a>
+                    <a href="index.html#pricing" class="text-gray-700 hover:text-primary transition">Tickets</a>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition">Contacto</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <a href="index.html#pricing" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition">
+                        Registrarse
+                    </a>
+                </div>
+                
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Agenda <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Completa</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Tres días increíbles del 15 al 17 de Mayo 2026
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                        <i class="fas fa-calendar text-primary mr-2"></i>
+                        <span class="font-semibold">15-17 Mayo 2026</span>
+                    </div>
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                        <i class="fas fa-clock text-secondary mr-2"></i>
+                        <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="bg-white px-6 py-3 rounded-full shadow-md">
+                        <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                        <span class="font-semibold">Centro de Convenciones</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Tabs -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Day Selector -->
+            <div class="flex justify-center mb-12" data-aos="fade-up">
+                <div class="inline-flex bg-gray-100 rounded-full p-1">
+                    <button class="schedule-tab active px-8 py-3 rounded-full font-semibold transition" data-day="1">
+                        Día 1 - 15 Mayo
+                    </button>
+                    <button class="schedule-tab px-8 py-3 rounded-full font-semibold transition" data-day="2">
+                        Día 2 - 16 Mayo
+                    </button>
+                    <button class="schedule-tab px-8 py-3 rounded-full font-semibold transition" data-day="3">
+                        Día 3 - 17 Mayo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Day 1 Schedule -->
+            <div class="schedule-day active" id="day-1">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Miércoles, 15 de Mayo - Día de Apertura</h2>
+                    
+                    <!-- Timeline -->
+                    <div class="space-y-6">
+                        
+                        <!-- Session -->
+                        <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 hover:shadow-xl transition-all" data-aos="fade-up">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-48 flex-shrink-0">
+                                    <div class="bg-primary text-white px-4 py-2 rounded-lg text-center mb-2">
+                                        <div class="text-2xl font-bold">09:00</div>
+                                        <div class="text-sm">60 min</div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Keynote</span>
+                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">IA</span>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold mb-2">El Futuro de la Inteligencia Artificial</h3>
+                                    <p class="text-gray-600 mb-3">Una visión profunda sobre cómo la IA está transformando industrias y creando nuevas oportunidades de negocio. Exploraremos los últimos avances en GPT, visión por computadora y IA generativa.</p>
+                                    <div class="flex items-center space-x-4 text-gray-700">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-user mr-2 text-primary"></i>
+                                            <span class="font-semibold">Sarah Johnson</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-map-marker-alt mr-2 text-secondary"></i>
+                                            <span>Auditorio Principal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coffee Break -->
+                        <div class="bg-gray-50 rounded-2xl p-6" data-aos="fade-up">
+                            <div class="flex items-center justify-center space-x-4">
+                                <i class="fas fa-coffee text-accent text-2xl"></i>
+                                <div>
+                                    <div class="font-bold">10:00 - 10:30</div>
+                                    <div class="text-gray-600">Coffee Break & Networking</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parallel Sessions -->
+                        <div class="grid md:grid-cols-2 gap-6" data-aos="fade-up">
+                            <!-- Session A -->
+                            <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 hover:shadow-xl transition-all">
+                                <div class="mb-4">
+                                    <div class="bg-secondary text-white px-4 py-2 rounded-lg inline-block mb-2">
+                                        <div class="font-bold">10:30 - 12:00</div>
+                                    </div>
+                                    <div class="flex gap-2 mt-2">
+                                        <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-xs font-semibold">Workshop</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Blockchain & Smart Contracts</h3>
+                                <p class="text-gray-600 text-sm mb-3">Taller práctico para crear tu primer smart contract en Ethereum y Solidity.</p>
+                                <div class="text-sm text-gray-700">
+                                    <div><i class="fas fa-user mr-2"></i>Michael Chen</div>
+                                    <div><i class="fas fa-map-marker-alt mr-2"></i>Sala A</div>
+                                </div>
+                            </div>
+
+                            <!-- Session B -->
+                            <div class="bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl p-6 hover:shadow-xl transition-all">
+                                <div class="mb-4">
+                                    <div class="bg-accent text-white px-4 py-2 rounded-lg inline-block mb-2">
+                                        <div class="font-bold">10:30 - 12:00</div>
+                                    </div>
+                                    <div class="flex gap-2 mt-2">
+                                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Taller</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Cloud Architecture con AWS</h3>
+                                <p class="text-gray-600 text-sm mb-3">Diseña infraestructuras cloud escalables y seguras con AWS.</p>
+                                <div class="text-sm text-gray-700">
+                                    <div><i class="fas fa-user mr-2"></i>David Martinez</div>
+                                    <div><i class="fas fa-map-marker-alt mr-2"></i>Sala B</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lunch -->
+                        <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6" data-aos="fade-up">
+                            <div class="flex items-center justify-center space-x-4">
+                                <i class="fas fa-utensils text-green-600 text-2xl"></i>
+                                <div>
+                                    <div class="font-bold text-lg">12:00 - 13:30</div>
+                                    <div class="text-gray-600">Almuerzo & Networking</div>
+                                    <div class="text-sm text-gray-500">Área de Networking - Piso 2</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Afternoon Session -->
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 hover:shadow-xl transition-all" data-aos="fade-up">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-48 flex-shrink-0">
+                                    <div class="bg-primary text-white px-4 py-2 rounded-lg text-center mb-2">
+                                        <div class="text-2xl font-bold">13:30</div>
+                                        <div class="text-sm">90 min</div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Panel</span>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold mb-2">Emprendimiento en la Era Digital</h3>
+                                    <p class="text-gray-600 mb-3">Panel de discusión con emprendedores exitosos sobre cómo construir startups tech escalables. Aprende de sus experiencias, fracasos y consejos para nuevos emprendedores.</p>
+                                    <div class="flex items-center space-x-4 text-gray-700">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-users mr-2 text-primary"></i>
+                                            <span class="font-semibold">Emma Davis, Carlos Rodriguez & más</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-map-marker-alt mr-2 text-secondary"></i>
+                                            <span>Auditorio Principal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Closing Keynote -->
+                        <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 hover:shadow-xl transition-all" data-aos="fade-up">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="md:w-48 flex-shrink-0">
+                                    <div class="bg-secondary text-white px-4 py-2 rounded-lg text-center mb-2">
+                                        <div class="text-2xl font-bold">15:30</div>
+                                        <div class="text-sm">60 min</div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Keynote</span>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold mb-2">Innovación y Transformación Digital</h3>
+                                    <p class="text-gray-600 mb-3">Cómo las empresas líderes están utilizando la tecnología para reinventar sus modelos de negocio.</p>
+                                    <div class="flex items-center space-x-4 text-gray-700">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-user mr-2 text-primary"></i>
+                                            <span class="font-semibold">Lisa Wang</span>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <i class="fas fa-map-marker-alt mr-2 text-secondary"></i>
+                                            <span>Auditorio Principal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 Schedule -->
+            <div class="schedule-day hidden" id="day-2">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Jueves, 16 de Mayo - Día de Talleres</h2>
+                    <div class="text-center py-20 bg-gray-50 rounded-3xl">
+                        <i class="fas fa-tools text-6xl text-gray-300 mb-4"></i>
+                        <p class="text-xl text-gray-600">Programación del Día 2 próximamente...</p>
+                        <p class="text-gray-500 mt-2">Talleres intensivos y sesiones prácticas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 Schedule -->
+            <div class="schedule-day hidden" id="day-3">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Viernes, 17 de Mayo - Día de Clausura</h2>
+                    <div class="text-center py-20 bg-gray-50 rounded-3xl">
+                        <i class="fas fa-trophy text-6xl text-gray-300 mb-4"></i>
+                        <p class="text-xl text-gray-600">Programación del Día 3 próximamente...</p>
+                        <p class="text-gray-500 mt-2">Cierre con keynotes inspiradores y ceremonia de clausura</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-white mb-6">
+                Descarga la Agenda Completa
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Obtén el PDF con toda la información detallada de las sesiones, speakers y ubicaciones
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all">
+                    <i class="fas fa-download mr-2"></i>Descargar PDF
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all">
+                    <i class="fas fa-calendar-plus mr-2"></i>Agregar a Calendario
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">EventPro</span>
+                    </div>
+                    <p class="text-gray-400">
+                        La conferencia de tecnología más grande de Latinoamérica.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">Acerca de</a></li>
+                        <li><a href="speakers.html" class="text-gray-400 hover:text-white transition">Speakers</a></li>
+                        <li><a href="schedule.html" class="text-gray-400 hover:text-white transition">Agenda</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Soporte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Recibe actualizaciones del evento</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu email" class="flex-1 px-4 py-2 rounded-l-full bg-gray-800 text-white border-2 border-gray-700 focus:border-primary focus:outline-none">
+                        <button class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-r-full font-semibold hover:shadow-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 EventPro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-primary to-secondary text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Schedule tabs functionality
+        const scheduleTabs = document.querySelectorAll('.schedule-tab');
+        const scheduleDays = document.querySelectorAll('.schedule-day');
+
+        scheduleTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const day = this.getAttribute('data-day');
+                
+                scheduleTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white');
+                    t.classList.add('text-gray-700');
+                });
+                
+                this.classList.add('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white');
+                this.classList.remove('text-gray-700');
+                
+                scheduleDays.forEach(d => d.classList.add('hidden'));
+                document.getElementById(`day-${day}`).classList.remove('hidden');
+            });
+        });
+
+        // Set initial active state
+        document.querySelector('.schedule-tab.active').classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white');
+    </script>
+</body>
+</html>

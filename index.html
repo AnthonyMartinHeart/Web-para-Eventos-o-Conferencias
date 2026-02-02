@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPro - Conferencia de Tecnología 2026</title>
+    <meta name="description" content="La conferencia de tecnología más grande del año. Únete a líderes de la industria.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#6366f1',
+                        'secondary': '#ec4899',
+                        'accent': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">EventPro</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition">Inicio</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition">Acerca de</a>
+                    <a href="#speakers" class="text-gray-700 hover:text-primary transition">Speakers</a>
+                    <a href="#schedule" class="text-gray-700 hover:text-primary transition">Agenda</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition">Tickets</a>
+                    <a href="#sponsors" class="text-gray-700 hover:text-primary transition">Patrocinadores</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition">Contacto</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#pricing" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+                        Registrarse
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-primary transition">Inicio</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition">Acerca de</a>
+                <a href="#speakers" class="text-gray-700 hover:text-primary transition">Speakers</a>
+                <a href="#schedule" class="text-gray-700 hover:text-primary transition">Agenda</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary transition">Tickets</a>
+                <a href="#sponsors" class="text-gray-700 hover:text-primary transition">Patrocinadores</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition">Contacto</a>
+                <a href="#pricing" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold text-center">
+                    Registrarse
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 min-h-screen flex items-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right">
+                    <div class="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-md">
+                        <span class="text-primary font-semibold"><i class="far fa-calendar mr-2"></i>15-17 Mayo 2026</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                        Conferencia de
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Tecnología 2026
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Únete a más de 5,000 profesionales de la tecnología en el evento más innovador del año. Aprende, conecta y crece.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#pricing" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all text-center">
+                            <i class="fas fa-ticket-alt mr-2"></i>Obtener Tickets
+                        </a>
+                        <a href="#about" class="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all border-2 border-gray-200 text-center">
+                            <i class="fas fa-play-circle mr-2"></i>Ver Video
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary">5K+</div>
+                            <div class="text-gray-600 text-sm mt-1">Asistentes</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary">50+</div>
+                            <div class="text-gray-600 text-sm mt-1">Speakers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary">30+</div>
+                            <div class="text-gray-600 text-sm mt-1">Talleres</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Image -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
+                             alt="Conferencia" 
+                             class="rounded-3xl shadow-2xl">
+                    </div>
+                    <!-- Floating Cards -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl z-20" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">2,345</div>
+                                <div class="text-sm text-gray-500">Registrados</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl z-20" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">4.9/5</div>
+                                <div class="text-sm text-gray-500">Valoración</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Acerca del <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Evento</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    La conferencia más importante de tecnología, innovación y emprendimiento en Latinoamérica
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Networking</h3>
+                    <p class="text-gray-600">
+                        Conecta con profesionales de todo el mundo y expande tu red de contactos en la industria tecnológica.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Innovación</h3>
+                    <p class="text-gray-600">
+                        Descubre las últimas tendencias y tecnologías que están transformando el mundo digital.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Experiencia</h3>
+                    <p class="text-gray-600">
+                        Aprende de los mejores expertos y líderes de la industria en conferencias magistrales.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Video Section -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop" 
+                             alt="Video Preview" 
+                             class="w-full">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all flex items-center justify-center">
+                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-primary text-2xl ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-6">¿Por qué asistir a EventPro 2026?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Contenido de Clase Mundial</h4>
+                                <p class="text-gray-600">Más de 100 sesiones con los mejores speakers internacionales</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Talleres Prácticos</h4>
+                                <p class="text-gray-600">Aprende nuevas habilidades con workshops hands-on</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Expo de Tecnología</h4>
+                                <p class="text-gray-600">Descubre productos y servicios innovadores en nuestra expo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Certificado Oficial</h4>
+                                <p class="text-gray-600">Recibe un certificado de asistencia avalado internacionalmente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Nuestros <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Speakers</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Conoce a los expertos que compartirán su conocimiento y experiencia
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Speaker 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" 
+                             alt="Speaker" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">Sarah Johnson</h3>
+                                <p class="text-sm">CEO at TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Experta en IA y Machine Learning con más de 15 años de experiencia.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Speaker 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" 
+                             alt="Speaker" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">Michael Chen</h3>
+                                <p class="text-sm">CTO at InnovateLab</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Pionero en blockchain y criptomonedas, speaker internacional reconocido.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Speaker 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop" 
+                             alt="Speaker" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">Emma Davis</h3>
+                                <p class="text-sm">Founder at StartupHub</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Emprendedora serial y mentora de startups tecnológicas exitosas.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Speaker 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" 
+                             alt="Speaker" 
+                             class="w-full h-64 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">David Martinez</h3>
+                                <p class="text-sm">Head of Cloud at GlobalTech</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Arquitecto de soluciones cloud y DevOps con certificaciones AWS/Azure.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="speakers.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                    Ver Todos los Speakers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Agenda del <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Evento</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tres días llenos de conocimiento, innovación y networking
+                </p>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="flex justify-center mb-12" data-aos="fade-up">
+                <div class="inline-flex bg-gray-100 rounded-full p-1">
+                    <button class="schedule-tab-btn active px-8 py-3 rounded-full font-semibold transition-all" data-day="day1">
+                        Día 1 - 15 Mayo
+                    </button>
+                    <button class="schedule-tab-btn px-8 py-3 rounded-full font-semibold transition-all" data-day="day2">
+                        Día 2 - 16 Mayo
+                    </button>
+                    <button class="schedule-tab-btn px-8 py-3 rounded-full font-semibold transition-all" data-day="day3">
+                        Día 3 - 17 Mayo
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Day 1 Schedule -->
+            <div class="schedule-content" id="day1">
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <!-- Session -->
+                    <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6 hover:shadow-lg transition-all" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">09:00 - 10:00</span>
+                                    <span class="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Keynote</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">El Futuro de la Inteligencia Artificial</h3>
+                                <p class="text-gray-600 mb-3">Descubre cómo la IA está transformando industrias y creando nuevas oportunidades.</p>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <i class="fas fa-user"></i>
+                                    <span class="font-semibold">Sarah Johnson</span>
+                                    <span class="text-gray-400">•</span>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Auditorio Principal</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-6">
+                                <button class="bg-white text-primary px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
+                                    Más Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session -->
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold">10:30 - 11:30</span>
+                                    <span class="bg-pink-200 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">Workshop</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">Blockchain y Web3: Taller Práctico</h3>
+                                <p class="text-gray-600 mb-3">Aprende a crear tu primer smart contract y DApp desde cero.</p>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <i class="fas fa-user"></i>
+                                    <span class="font-semibold">Michael Chen</span>
+                                    <span class="text-gray-400">•</span>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Sala de Talleres A</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-6">
+                                <button class="bg-white text-secondary px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
+                                    Más Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Session -->
+                    <div class="bg-gradient-to-r from-orange-50 to-pink-50 rounded-2xl p-6 hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-3">
+                                    <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">12:00 - 13:00</span>
+                                    <span class="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Panel</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">Emprendimiento en la Era Digital</h3>
+                                <p class="text-gray-600 mb-3">Panel de discusión con emprendedores exitosos del ecosistema tech.</p>
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <i class="fas fa-users"></i>
+                                    <span class="font-semibold">Emma Davis & más</span>
+                                    <span class="text-gray-400">•</span>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Auditorio Principal</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-6">
+                                <button class="bg-white text-accent px-6 py-2 rounded-full font-semibold hover:shadow-md transition">
+                                    Más Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 & 3 (Hidden by default) -->
+            <div class="schedule-content hidden" id="day2">
+                <div class="text-center py-20">
+                    <p class="text-xl text-gray-600">Contenido del Día 2 próximamente...</p>
+                </div>
+            </div>
+            
+            <div class="schedule-content hidden" id="day3">
+                <div class="text-center py-20">
+                    <p class="text-xl text-gray-600">Contenido del Día 3 próximamente...</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="schedule.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                    Ver Agenda Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Elige tu <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Ticket</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Planes diseñados para cada tipo de asistente, desde estudiantes hasta profesionales
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-gray-100 px-4 py-2 rounded-full mb-4">
+                            <span class="text-gray-700 font-semibold">BÁSICO</span>
+                        </div>
+                        <div class="text-5xl font-bold mb-2">$250.000</div>
+                        <p class="text-gray-600">Por persona</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Acceso a todas las conferencias</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Material digital del evento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Certificado de asistencia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Coffee breaks incluidos</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times mt-1 mr-3"></i>
+                            <span>Acceso a talleres premium</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times mt-1 mr-3"></i>
+                            <span>Networking VIP</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-gray-200 text-gray-700 py-4 rounded-full font-semibold hover:bg-gray-300 transition">
+                        Seleccionar Plan
+                    </button>
+                </div>
+                
+                <!-- Pro Plan (Popular) -->
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 shadow-2xl transform scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-6 py-2 rounded-full text-sm font-bold">MÁS POPULAR</span>
+                    </div>
+                    
+                    <div class="text-center mb-8 text-white">
+                        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                            <span class="font-semibold">PROFESIONAL</span>
+                        </div>
+                        <div class="text-5xl font-bold mb-2">$450.000</div>
+                        <p class="text-white/80">Por persona</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-white">
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-3"></i>
+                            <span>Todo lo del plan Básico</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-3"></i>
+                            <span>Acceso a 5 talleres premium</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-3"></i>
+                            <span>Almuerzo incluido (3 días)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-3"></i>
+                            <span>Kit de bienvenida premium</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check mt-1 mr-3"></i>
+                            <span>Acceso a área de networking</span>
+                        </li>
+                        <li class="flex items-start text-white/60">
+                            <i class="fas fa-times mt-1 mr-3"></i>
+                            <span>Acceso backstage</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-white text-primary py-4 rounded-full font-semibold hover:shadow-xl transition transform hover:scale-105">
+                        Seleccionar Plan
+                    </button>
+                </div>
+                
+                <!-- VIP Plan -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-gradient-to-r from-accent to-primary px-4 py-2 rounded-full mb-4">
+                            <span class="text-white font-semibold">VIP</span>
+                        </div>
+                        <div class="text-5xl font-bold mb-2">$750.000</div>
+                        <p class="text-gray-600">Por persona</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Todo lo del plan Profesional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Acceso ilimitado a talleres</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Cena VIP con speakers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Acceso backstage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Parking preferencial</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Asiento reservado primera fila</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-gradient-to-r from-accent to-primary text-white py-4 rounded-full font-semibold hover:shadow-xl transition transform hover:scale-105">
+                        Seleccionar Plan
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <p class="text-gray-600 mb-4">¿Grupos de 10+ personas? Contáctanos para descuentos especiales</p>
+                <a href="#contact" class="text-primary font-semibold hover:text-secondary transition">
+                    Contactar Ventas <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Nuestros <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Patrocinadores</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Gracias a las empresas que hacen posible este evento
+                </p>
+            </div>
+            
+            <!-- Platinum Sponsors -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Patrocinadores Platinum</h3>
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-4xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-4xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-4xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gold Sponsors -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-700">Patrocinadores Gold</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+                    <div class="bg-gray-50 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-2xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-2xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-2xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-2xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition">
+                        <div class="text-2xl font-bold text-gray-400">LOGO</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <a href="#contact" class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                    Conviértete en Patrocinador
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    ¿Tienes <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Preguntas?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Estamos aquí para ayudarte. Contáctanos y te responderemos pronto
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Ubicación</h4>
+                                <p class="text-gray-600">Centro de Convenciones<br>Ciudad de México, México</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">info@eventpro.com<br>support@eventpro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Teléfono</h4>
+                                <p class="text-gray-600">+52 55 1234 5678<br>Lun - Vie: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:shadow-lg transform hover:-translate-y-1 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center hover:shadow-lg transform hover:-translate-y-1 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center hover:shadow-lg transform hover:-translate-y-1 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:shadow-lg transform hover:-translate-y-1 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form class="bg-white rounded-3xl p-8 shadow-lg">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="Juan Pérez">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="juan@ejemplo.com">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Asunto</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">EventPro</span>
+                    </div>
+                    <p class="text-gray-400">
+                        La conferencia de tecnología más grande de Latinoamérica.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Acerca de</a></li>
+                        <li><a href="#speakers" class="text-gray-400 hover:text-white transition">Speakers</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white transition">Agenda</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Recursos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Soporte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Recibe actualizaciones del evento</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu email" class="flex-1 px-4 py-2 rounded-l-full bg-gray-800 text-white border-2 border-gray-700 focus:border-primary focus:outline-none">
+                        <button class="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-r-full font-semibold hover:shadow-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 EventPro. Todos los derechos reservados. Diseñado con <i class="fas fa-heart text-red-500"></i> por Tu Empresa</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-primary to-secondary text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
